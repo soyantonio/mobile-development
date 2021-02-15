@@ -1,2 +1,2 @@
-# mobile-development
+# Mobile Development
 Repository that stores the content of the subject Mobile Development
