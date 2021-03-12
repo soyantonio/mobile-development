@@ -6,7 +6,9 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135afe6f-c20c-414e-8ae2-2217d0568625" name="Default Changelist" comment="" />
+    <list default="true" id="135afe6f-c20c-414e-8ae2-2217d0568625" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +34,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-12T01:52:57.752Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.2064383853">
@@ -135,10 +137,10 @@
       <screen x="1920" y="-638" width="1920" height="1040" />
     </state>
     <state x="2758" y="-220" key="Github.ShareDialog/0.0.1280.680/1920.-638.1920.1040@1920.-638.1920.1040" timestamp="1615516506108" />
-    <state x="2535" y="-421" key="SettingsEditor" timestamp="1615518058368">
+    <state x="2535" y="-421" key="SettingsEditor" timestamp="1615519620105">
       <screen x="1920" y="-638" width="1920" height="1040" />
     </state>
-    <state x="2535" y="-421" key="SettingsEditor/0.0.1280.680/1920.-638.1920.1040@1920.-638.1920.1040" timestamp="1615518058368" />
+    <state x="2535" y="-421" key="SettingsEditor/0.0.1280.680/1920.-638.1920.1040@1920.-638.1920.1040" timestamp="1615519620105" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1615515723701">
       <screen x="1920" y="-638" width="1920" height="1040" />
     </state>
