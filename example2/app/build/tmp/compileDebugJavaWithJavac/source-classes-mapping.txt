@@ -1,0 +1,7 @@
+mx/tec/example_2/MainActivity.java
+ mx.tec.example_2.MainActivity
+ mx.tec.example_2.MainActivity$1
+mx/tec/example_2/BuildConfig.java
+ mx.tec.example_2.BuildConfig
+mx/tec/example_2/ChildActivity.java
+ mx.tec.example_2.ChildActivity
