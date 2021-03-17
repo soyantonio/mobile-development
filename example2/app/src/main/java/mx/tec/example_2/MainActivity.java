@@ -2,6 +2,7 @@ package mx.tec.example_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textViewManager;
     ImageView imgViewManager;
     Intent myIntent;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         buttonManager = findViewById(R.id.button);
         textViewManager = findViewById(R.id.textView);
         imgViewManager = findViewById(R.id.imageView);
+        context = getApplicationContext();
         buttonManager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     imgViewManager.setVisibility(View.VISIBLE);
                 }
 
-                myIntent = new Intent(MainActivity.this, ChildActivity.class);
+                myIntent = new Intent(context, ChildActivity.class);
                 myIntent.putExtra("myExtra", textViewManager.getText().toString());
                 startActivity(myIntent);
             }
