@@ -147,7 +147,8 @@ public class MainActivity extends AppCompatActivity {
         String baseURL = "http://api.openweathermap.org/data/2.5/weather?";
         String responseMode ="&mode=xml";
         String units = "&units=metric";
-        String apiKey="&APPID=a293336545197a7a57f23ceb01c1ea04";
+        String weatherKey = "";
+        String apiKey="&APPID=" + weatherKey;
         apiURL = baseURL + responseMode + units + apiKey;
 
         EditText city = findViewById(R.id.city2);
