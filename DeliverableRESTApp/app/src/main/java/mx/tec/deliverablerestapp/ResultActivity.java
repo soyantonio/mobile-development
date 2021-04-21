@@ -47,7 +47,7 @@ public class ResultActivity extends AppCompatActivity {
 
         Context myContext = getApplicationContext();
         ImageView myImageView = findViewById(R.id.imageView);
-        Glide.with(myContext).load("http://openweathermap.org/img/w/" + icon + ".png").into(myImageView);
+        Glide.with(myContext).load("https://openweathermap.org/img/w/" + icon + ".png").into(myImageView);
 
     }
 }

@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendRequest() {
         String apiURL = "";
-        String baseURL = "http://api.openweathermap.org/data/2.5/weather?";
+        String baseURL = "https://api.openweathermap.org/data/2.5/weather?";
         String responseMode ="&mode=xml";
         String units = "&units=metric";
         String weatherKey = "";
