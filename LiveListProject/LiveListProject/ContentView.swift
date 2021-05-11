@@ -1,0 +1,28 @@
+//
+//  ContentView.swift
+//  LiveListProject
+//
+//  Created by Jesús Antonio Pérez Reyes on 06/05/21.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var countryController = CountryController()
+    
+    var body: some View {
+        NavigationView {
+            List(countryController.countries) { country in
+                Text(country.name)
+            }
+            .navigationBarTitle("Countries", displayMode: .inline)
+//            .navigationTitle("Countries")
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
