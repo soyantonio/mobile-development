@@ -13,10 +13,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(countryController.countries) { country in
-                Text(country.name)
+                NavigationLink(destination: DetailView(country: country)){
+                    Text(country.name)
+                }
             }
             .navigationBarTitle("Countries", displayMode: .inline)
-//            .navigationTitle("Countries")
+    //      .navigationTitle("Countries")
         }
     }
 }
@@ -26,3 +28,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
