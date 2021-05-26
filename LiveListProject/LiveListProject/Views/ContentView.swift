@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    var countryController = CountryController()
-    
+//    static var countryController = CountryController()
+//    @State var countries: [CountryModel] = countryController.countries;
+    //@StateObject var countryController = CountryController()
+    @ObservedObject var countryController = CountryController()
+
+
     var body: some View {
         NavigationView {
             List(countryController.countries) { country in
@@ -19,7 +23,8 @@ struct ContentView: View {
             }
             .navigationBarTitle("Countries", displayMode: .inline)
             .navigationBarItems(
-                trailing: NavigationLink(destination: AddCountryView(cityName: "")){
+//                trailing: NavigationLink(destination: AddCountryView(countries: $countries)){
+                    trailing: NavigationLink(destination: AddCountryView(countryController: countryController)){
                     Image(systemName: "plus").foregroundColor(.blue)
                 }
             )

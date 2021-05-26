@@ -8,21 +8,59 @@
 import SwiftUI
 
 struct AddCountryView: View {
-    @State var cityName: String
+//    @Binding var countries: [CountryModel]
+    @ObservedObject var countryController: CountryController
+    @State var countryName: String = ""
+    @State var population: String = ""
+
+
     var body: some View {
         VStack{
-            TextField("Add a city name", text: $cityName)
-            Text(cityName)
-            Button(action: {}, label: {
-                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-            })
+            Text("Please Add a new country with the population")
+                    .font(.title2)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 20)
+            HStack {
+                Image(systemName: "pencil.circle")
+                        .foregroundColor(.gray)
+                TextField("Country", text: $countryName)
+            }
+            .padding()
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 1.0))
+            HStack {
+                Image(systemName: "person.3")
+                        .foregroundColor(.gray)
+                TextField("Population", text: $population)
+            }
+            .padding()
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 1.0))
+
+            HStack {
+//                Button(action: ) {
+//                    Text("Cancel")
+//                }.padding(.all).padding(.horizontal).foregroundColor(.white).background(Color.blue).cornerRadius(7.0)
+                Button(action: {
+//                    countries.append(CountryModel(id: UUID(), name: countryName, population: population))
+                    countryController.addCountry(country: CountryModel(id: UUID(), name: countryName, population: population))
+                }) {
+                    Text("Add country")
+                }.padding(.all).foregroundColor(.white).background(Color.blue).cornerRadius(7.0)
+            }.padding(.top)
         }
+        .padding(.horizontal, 10)
         .navigationBarTitle("Add a new country")
     }
 }
 
 struct AddCountryView_Previews: PreviewProvider {
+    @State static var data: [CountryModel] = [
+        CountryModel(id: UUID(), name: "Mexico", population: "128M"),
+        CountryModel(id: UUID(), name: "Canada", population: "37M"),
+    ]
+    static var countryController = CountryController()
+
     static var previews: some View {
-        AddCountryView(cityName: "")
+        AddCountryView(countryController: countryController)
+//        AddCountryView(countries: $data)
     }
 }

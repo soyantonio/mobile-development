@@ -7,9 +7,9 @@
 
 import Foundation
 
-class CountryController {
- 
-    var countries: [CountryModel]
+class CountryController: ObservableObject {
+    // Published is to let available countries to another view to be observed
+    @Published var countries: [CountryModel]
     
     init(){
         self.countries = [
@@ -20,7 +20,10 @@ class CountryController {
             CountryModel(id: UUID(), name: "China", population: "1.38B"),
         ]
     }
-    
+
+    func addCountry(country: CountryModel) {
+        countries.append(country)
+    }
     
 }
 
