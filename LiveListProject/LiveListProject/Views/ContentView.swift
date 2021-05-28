@@ -16,10 +16,17 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List(countryController.countries) { country in
-                NavigationLink(destination: DetailView(country: country)){
-                    Text(country.name)
-                }
+//            List(countryController.countries) { country in
+//                NavigationLink(destination: DetailView(country: country)){
+//                    Text(country.name)
+//                }
+//            }
+            List {
+                ForEach(countryController.countries) { country in
+                    NavigationLink(destination: DetailView(country: country)){
+                        Text(country.name)
+                    }
+                }.onDelete(perform: deleteItem)
             }
             .navigationBarTitle("Countries", displayMode: .inline)
             .navigationBarItems(
@@ -30,6 +37,10 @@ struct ContentView: View {
             )
     //      .navigationTitle("Countries")
         }
+    }
+
+    private func deleteItem(at IndexSet: IndexSet) {
+        countryController.countries.remove(atOffsets: IndexSet)
     }
 }
 

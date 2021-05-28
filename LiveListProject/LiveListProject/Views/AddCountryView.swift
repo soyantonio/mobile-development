@@ -57,6 +57,7 @@ struct AddCountryView: View {
         }
         .padding(.horizontal, 10)
         .navigationBarTitle("Add a new country")
+        .navigationBarBackButtonHidden(true)
     }
 }
 
